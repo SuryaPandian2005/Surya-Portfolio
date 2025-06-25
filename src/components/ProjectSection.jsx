@@ -28,7 +28,7 @@ const projects = [
     image: "/projects/ecommerce.jpg",
     tags: ["React", "Node.js", "Mongodb"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SuryaPandian2005/event-ticket-booking.git",
   },
   {
     id: 4,
