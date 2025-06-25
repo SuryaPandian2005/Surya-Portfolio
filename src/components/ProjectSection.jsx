@@ -48,7 +48,7 @@ const projects = [
     image: "/projects/stroke.webp",
     tags: ["python", "machine learning", "streamlit"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SuryaPandian2005/stroke-prediction.git",
   },
 ];
 
