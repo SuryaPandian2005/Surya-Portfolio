@@ -8,7 +8,7 @@ const projects = [
     image: "/projects/fire.webp",
     tags: ["python", "realtime camara", "yolo v9"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SuryaPandian2005/Forest-fire-prediction.git",
   },
   {
     id: 2,
