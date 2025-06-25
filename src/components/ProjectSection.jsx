@@ -38,7 +38,7 @@ const projects = [
     image: "/projects/lung.webp",
     tags: ["deep learning", "python", "streamlit"],
     demoUrl: "#",
-    githubUrl: "#",
+    githubUrl: "https://github.com/SuryaPandian2005/lung-cancer-prediction.git",
   },
   {
     id: 3,
