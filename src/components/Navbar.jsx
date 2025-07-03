@@ -1,12 +1,14 @@
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // for internal routes like /rps
 
 const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "Game 🎮", href: "/rps" }, // added game link
   { name: "Contact", href: "#contact" },
 ];
 
@@ -45,15 +47,25 @@ export const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {navItems.map((item, key) => (
-              <a
-                key={key}
-                href={item.href}
-                className="text-foreground/80 hover:text-primary transition-colors duration-300"
-              >
-                {item.name}
-              </a>
-            ))}
+            {navItems.map((item, key) =>
+              item.href.startsWith("/") ? (
+                <Link
+                  key={key}
+                  to={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </Link>
+              ) : (
+                <a
+                  key={key}
+                  href={item.href}
+                  className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                >
+                  {item.name}
+                </a>
+              )
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -67,7 +79,7 @@ export const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay - moved outside nav */}
+      {/* Mobile Menu Overlay */}
       <div
         className={cn(
           "fixed inset-0 bg-background/95 backdrop-blur-md z-30 flex flex-col items-center justify-center",
@@ -78,16 +90,27 @@ export const Navbar = () => {
         )}
       >
         <div className="flex flex-col space-y-8 text-xl">
-          {navItems.map((item, key) => (
-            <a
-              key={key}
-              href={item.href}
-              onClick={() => setIsMenuOpen(false)}
-              className="text-foreground/80 hover:text-primary transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          ))}
+          {navItems.map((item, key) =>
+            item.href.startsWith("/") ? (
+              <Link
+                key={key}
+                to={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <a
+                key={key}
+                href={item.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-foreground/80 hover:text-primary transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            )
+          )}
         </div>
       </div>
     </>
