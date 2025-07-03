@@ -160,3 +160,100 @@
   padding: 0;
   text-align: center;
 }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flash {
+  0% { background-color: rgba(255, 255, 255, 0.9); }
+  100% { background-color: transparent; }
+}
+
+@keyframes text-blood-drip {
+  0% { transform: translateY(-10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-flash {
+  animation: flash 0.3s ease-out;
+}
+
+.text-blood {
+  font-family: 'Creepster', cursive;
+  color: red;
+  font-size: 2rem;
+  animation: text-blood-drip 0.6s ease-out;
+  text-shadow: 0 0 10px red;
+}
+
+.button-glow {
+  background: #ff1744;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff1744, 0 0 20px #ff1744;
+  transition: transform 0.2s;
+}
+.button-glow:hover {
+  transform: scale(1.1);
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes flash {
+  0% { background-color: rgba(255, 255, 255, 0.9); }
+  100% { background-color: transparent; }
+}
+
+@keyframes text-blood-drip {
+  0% { transform: translateY(-10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out forwards;
+}
+
+.animate-flash {
+  animation: flash 0.3s ease-out;
+}
+
+.text-blood {
+  font-family: 'Creepster', cursive;
+  color: red;
+  font-size: 2rem;
+  animation: text-blood-drip 0.6s ease-out;
+  text-shadow: 0 0 10px red;
+}
+
+.button-glow {
+  background: #ff1744;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff1744, 0 0 20px #ff1744;
+  transition: transform 0.2s;
+}
+.button-glow:hover {
+  transform: scale(1.1);
+}
+@keyframes text-glow {
+  0%, 100% { text-shadow: 0 0 8px #0ff, 0 0 20px #0ff; }
+  50% { text-shadow: 0 0 12px #0ff, 0 0 24px #0ff; }
+}
+.animate-text-glow {
+  animation: text-glow 2s ease-in-out infinite;
+}
+body {
+  cursor: url("curors/cursor.png"), auto;
+}
