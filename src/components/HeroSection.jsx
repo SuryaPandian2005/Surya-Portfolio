@@ -17,7 +17,7 @@ export const HeroSection = () => {
             </span>
             <span className="text-gradient ml-2 opacity-0 animate-fade-in-delay-2">
               {" "}
-              p
+              P
             </span>
           </h1>
 
@@ -56,7 +56,7 @@ export const HeroSection = () => {
         {/* Right Side: Image */}
         <div className="mt-10 md:mt-0 md:ml-8 w-full md:w-1/2 flex justify-center pt-4 opacity-0 animate-fade-in-delay-4">
           <img
-            src="/projects/surya.png"
+            src="/projects/passport surya.png"
             alt="Surya"
             className="rounded-xl max-h-[450px] w-auto object-cover shadow-xl"
           />
